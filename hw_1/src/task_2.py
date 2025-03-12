@@ -3,7 +3,6 @@ import sys
 from typing import TextIO
 
 
-
 def print_tail(io: TextIO, line_count: int):
     io_lines = io.readlines()
     if not len(io_lines):
@@ -11,6 +10,7 @@ def print_tail(io: TextIO, line_count: int):
     for line in io_lines[-line_count:]:
         print(line, end="")
     print()
+
 
 def main() -> None:
     if len(sys.argv) == 1:
@@ -22,5 +22,5 @@ def main() -> None:
                 print_tail(file, line_count=10)
 
 
-if __name__ ==  '__main__':
+if __name__ == '__main__':
     main()
