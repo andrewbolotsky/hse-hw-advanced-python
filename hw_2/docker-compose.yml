@@ -1,0 +1,6 @@
+services:
+  latex-generator:
+    build: .
+    volumes:
+      - ./results:/app/results
+    image: latex-doc-generator 
