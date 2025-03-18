@@ -1,0 +1,23 @@
+[project]
+name = "latex-document-generator"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "andrewbolotsky",email = "andrew04tlt@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+
+[tool.poetry]
+packages = [{include = "latex_document_generator"}]
+
+[tool.poetry.dependencies]
+python = ">=3.12"
+latex-components-generator = ">=1.0.2"
+
+[tool.poetry.scripts]
+generator = "latex_document_generator.generator:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
